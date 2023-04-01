@@ -11,8 +11,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     
     fd = s.makefile()
     
-    s.settimeout(5)
-    s.setblocking(True)
-    
     for line in fd:
         print(repr(line))
